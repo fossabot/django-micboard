@@ -25,7 +25,7 @@ namespace, but no executable file may import it.
 **Description:** Estimated 15-25 files imported from `micboard.manufacturers`. A partial migration would break CI (some files using old path, some new). No deprecation window — the shim had existed long enough that actively maintained code should already be migrated. Coordinating all changes atomically across admin, tasks, services, integrations, and tests was the uncertainty.
 
 **Experiments:**
-- Pre-migration audit: `grep -r "micboard.manufacturers" --include="*.py" | grep -v "__pycache__" | grep -v ".pyc"` — found 23 import sites across 12 files
+- Pre-migration audit: `grep -r "micboard.manufacturers" . | grep -v "__pycache__" | grep -v ".pyc"` — found 23 import sites across 12 files; run from the repository root to cover tests, documentation, and configuration
 - Strategy: create branch, update all 12 files in single commit, delete `micboard/manufacturers/` in same commit, run full test suite
 - Risk mitigation: run tests locally before push; if any import missed, CI catches it (fail-fast)
 

@@ -105,7 +105,9 @@ preferences = {
 # }
 ```
 
-Use `PerformerAssignment.objects.needing_alerts()` to select active assignments with at least one supported alert flag enabled.
+Use `PerformerAssignment.objects.needing_alerts()` to select active assignments
+with at least one supported alert flag enabled: `alert_on_battery_low`,
+`alert_on_signal_loss`, `alert_on_hardware_offline`, or `alert_on_audio_low`.
 
 ## Data constraints
 
