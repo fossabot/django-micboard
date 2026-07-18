@@ -7,6 +7,17 @@ and this project adheres to [Calendar Versioning](https://calver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **Property-based testing**: Add `hypothesis` to development dependencies and include starter property tests for DTO validation to automatically generate and verify edge cases.
+- **Mutation testing**: Add `mutmut` to development dependencies and introduce a weekly informational CI workflow to verify that tests successfully catch logic inversions and boundary errors.
+- **Pull Request Template**: Add a pull request template to guide contributors in submitting clean, well-tested changes.
+
+### Changed
+
+- **Dependency updates**: Enable auto-merge for Renovate dependency updates (digest-only and patch versions) to reduce maintainer overhead, with a 3-day stability delay on patch versions to guard against supply-chain attacks.
+- **Contributor documentation**: Update `README.md`, `CONTRIBUTING.md`, and `SECURITY.md` to explicitly state that the project is maintained by a single developer, setting expectations around response times.
+
 ### Fixed
 
 - **Audio alert selection**: Include assignments configured only for low-audio alerts when
